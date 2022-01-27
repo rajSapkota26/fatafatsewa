@@ -13,7 +13,7 @@
         android:src="@drawable/img_sliderimage"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cat_product_recyclerview"
+        android:id="@+id/cat_subcategory_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
