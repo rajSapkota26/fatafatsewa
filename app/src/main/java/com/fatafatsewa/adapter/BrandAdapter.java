@@ -34,7 +34,7 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Brand brand = brands.get(position);
-        Glide.with(context).load(brand.getName()).placeholder(R.drawable.ic_camera).into(holder.image);
+        Glide.with(context).load(brand.getImage()).placeholder(R.drawable.ic_camera).into(holder.image);
     }
 
     @Override

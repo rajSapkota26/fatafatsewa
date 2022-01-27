@@ -1,13 +1,12 @@
 package com.fatafatsewa.demolist;
 
-import android.os.Build;
-
 import com.fatafatsewa.R;
 import com.fatafatsewa.model.Brand;
 import com.fatafatsewa.model.Category;
 import com.fatafatsewa.model.Product;
 import com.fatafatsewa.model.SliderItem;
-import com.fatafatsewa.model.Sponser;
+import com.fatafatsewa.model.BannerProduct;
+import com.fatafatsewa.model.SubCategory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +33,18 @@ public class Demolist {
         l.add(new Category(" Bar", R.drawable.ic_bar));
         l.add(new Category(" Appliances", R.drawable.ic_homeapplience));
         l.add(new Category("Stationary", R.drawable.ic_stationary));
+
+        return l;
+    } public static List<SubCategory> getAllsubcategoryItem() {
+        List<SubCategory> l = new ArrayList<>();
+        l.add(new SubCategory("Mobile", R.drawable.ic_mobile));
+        l.add(new SubCategory("Laptop", R.drawable.ic_laptop));
+        l.add(new SubCategory("Camera", R.drawable.ic_camera));
+        l.add(new SubCategory("Accessories", R.drawable.ic_accessory));
+        l.add(new SubCategory(" Machinery", R.drawable.ic_machinary));
+        l.add(new SubCategory(" Bar", R.drawable.ic_bar));
+        l.add(new SubCategory(" Appliances", R.drawable.ic_homeapplience));
+        l.add(new SubCategory("Stationary", R.drawable.ic_stationary));
 
         return l;
     }
@@ -64,14 +75,14 @@ public class Demolist {
         return l;
     }
 
-    public static List<Sponser> getAllSponserItem() {
-        List<Sponser> l = new ArrayList<>();
+    public static List<BannerProduct> getAllSponserItem() {
+        List<BannerProduct> l = new ArrayList<>();
 
-        l.add(new Sponser("Top products", R.drawable.img_brand, getAllProductItem()));
-        l.add(new Sponser("products of the day", R.drawable.img_brand, getAllProductItem()));
-        l.add(new Sponser("new Arriavle", R.drawable.img_brand, getAllProductItem()));
-        l.add(new Sponser("Top products", R.drawable.img_brand, getAllProductItem()));
-        l.add(new Sponser("Top products", R.drawable.img_brand, getAllProductItem()));
+        l.add(new BannerProduct("Top products", R.drawable.img_brand, getAllProductItem()));
+        l.add(new BannerProduct("products of the day", R.drawable.img_brand, getAllProductItem()));
+        l.add(new BannerProduct("new Arriavle", R.drawable.img_brand, getAllProductItem()));
+        l.add(new BannerProduct("Top products", R.drawable.img_brand, getAllProductItem()));
+        l.add(new BannerProduct("Top products", R.drawable.img_brand, getAllProductItem()));
 
 
         return l;

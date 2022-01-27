@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.fatafatsewa.R;
-import com.fatafatsewa.adapter.MainCategoryAdapter;
+import com.fatafatsewa.adapter.CategoryAdapterOnlyName;
 import com.fatafatsewa.model.Category;
 
 import java.util.ArrayList;
@@ -22,8 +22,9 @@ import java.util.List;
 public class CategoryFragment extends Fragment {
     RecyclerView recyclerView;
     private List<Category> categories;
-    MainCategoryAdapter mainCategoryAdapter;
-    private String catName;
+    CategoryAdapterOnlyName mainCategoryAdapter;
+    private String catName="";
+    InnerCategoryFragment mainCategoryFragment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -55,20 +56,24 @@ public class CategoryFragment extends Fragment {
         categories.add(new Category("Category1", 0));
         categories.add(new Category("Category1", 0));
         categories.add(new Category("Category1", 0));
-        mainCategoryAdapter = new MainCategoryAdapter(getContext(), categories);
+        mainCategoryAdapter = new CategoryAdapterOnlyName(getContext(), categories);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(mainCategoryAdapter);
         mainCategoryAdapter.notifyDataSetChanged();
-        mainCategoryAdapter.setViewItemInterface(new MainCategoryAdapter.RecyclerViewItemInterface() {
+        mainCategoryFragment=new InnerCategoryFragment(catName);
+        getParentFragmentManager().beginTransaction().replace(R.id.cat_fragment_container, mainCategoryFragment).commit();
+        mainCategoryAdapter.setViewItemInterface(new CategoryAdapterOnlyName.RecyclerViewItemInterface() {
             @Override
             public void onItemClick(int position, String c) {
 
                 catName=c;
                 Toast.makeText(getContext(), position+" "+catName, Toast.LENGTH_SHORT).show();
+                getParentFragmentManager().beginTransaction().replace(R.id.cat_fragment_container, new InnerCategoryFragment(c)).commit();
+
             }
         });
 
-        getParentFragmentManager().beginTransaction().replace(R.id.cat_fragment_container, new MainCategoryFragment(catName)).commit();
+
 
 
         return view;

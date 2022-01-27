@@ -16,11 +16,11 @@ import com.fatafatsewa.model.Category;
 
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+public class CategoryAdapterNameWithImage extends RecyclerView.Adapter<CategoryAdapterNameWithImage.ViewHolder> {
     private Context context;
     private List<Category> categories;
 
-    public CategoryAdapter(Context context, List<Category> categories) {
+    public CategoryAdapterNameWithImage(Context context, List<Category> categories) {
         this.context = context;
         this.categories = categories;
     }
@@ -29,7 +29,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.sample_categorywithname,parent,false);
-        return new CategoryAdapter.ViewHolder(view);
+        return new CategoryAdapterNameWithImage.ViewHolder(view);
     }
 
     @Override

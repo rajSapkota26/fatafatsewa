@@ -1,75 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:orientation="vertical"
+    android:background="@color/orange"
     tools:context=".loginorregister.LoginActivity">
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@color/white"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView21"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:padding="15dp"
-        android:text="verify OTP"
-        app:layout_constraintTop_toBottomOf="@id/logo"
-        android:textColor="@color/orange"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <com.chaos.view.PinView
-        android:id="@+id/pin_view"
-        style="@style/PinWidget.PinView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:cursorVisible="true"
-        android:inputType="number"
-        android:layout_marginTop="25dp"
-        android:itemBackground="@color/white"
-        app:cursorColor="@color/black"
-        app:hideLineWhenFilled="true"
-        app:itemCount="6"
-        app:itemHeight="40dp"
-        app:itemRadius="5dp"
-        app:itemWidth="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/textView21"
-        app:layout_constraintStart_toStartOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView21"
-        app:lineColor="@color/orange"
-        app:lineWidth="1dp" />
+        android:orientation="horizontal">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
 
-    <Button
-        android:id="@+id/loginBtn"
+            android:textSize="@dimen/_16font_mdp"
+            android:text="Fatafat Sewa" />
+
+        <ImageView
+            android:layout_width="@dimen/_60mdp"
+            android:layout_height="@dimen/_60mdp"
+            android:layout_marginLeft="@dimen/_25mdp"
+            android:background="@color/white"
+            android:src="@drawable/logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:background="@drawable/bg_btn_orange"
-        android:padding="15dp"
-        android:text="@string/submit"
-        app:backgroundTint="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pin_view"
-        app:layout_constraintVertical_bias="0.326" />
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_50mdp"
+
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="#E040FB"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_blue"
+                android:text="Login"
+                android:layout_marginBottom="@dimen/_15mdp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_orange"
+                android:text="signup"
+                app:backgroundTint="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_20mdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7mdp"
+                    android:background="@drawable/bg_circle"
+                    android:padding="@dimen/_10mdp"
+                    android:src="@drawable/ic_facebook"
+                    android:tint="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7mdp"
+                    android:background="@drawable/bg_circle"
+                    android:padding="@dimen/_10mdp"
+                    android:src="@drawable/ic_facebook"
+                    android:tint="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_7mdp"
+                    android:background="@drawable/bg_circle"
+                    android:padding="@dimen/_10mdp"
+                    android:src="@drawable/ic_facebook"
+                    android:tint="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_15mdp"
+            android:layout_weight="3.5"
+           android:paddingLeft="@dimen/_15mdp"
+            android:paddingRight="@dimen/_15mdp"
+            android:background="@color/blue"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15mdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16font_mdp"
+                android:textStyle="bold"
+                android:text="Login Here" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:textColor="@color/white"
+                android:drawableRight="@drawable/ic_add"
+                android:text="UserName" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_full"
+                android:padding="@dimen/_15mdp" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:drawableRight="@drawable/ic_add"
+                android:text="UserName" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_full"
+                android:padding="@dimen/_15mdp" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:drawableRight="@drawable/ic_add"
+                android:text="UserName" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_full"
+                android:padding="@dimen/_15mdp" />
+
+            <TextView
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:drawableRight="@drawable/ic_add"
+                android:text="UserName" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_text_full"
+                android:layout_marginBottom="@dimen/_15mdp"
+                android:padding="@dimen/_15mdp" />
+            <Button
+                android:layout_width="@dimen/_150mdp"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_gravity="center"
+               android:textColor="@color/white"
+                android:padding="@dimen/_5mdp"
+                android:textSize="@dimen/_16font_mdp"
+                android:background="@drawable/bg_halfcorner"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+    </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -14,7 +14,7 @@ import com.fatafatsewa.model.Category;
 
 import java.util.List;
 
-public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapter.ViewHolder> {
+public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapterOnlyName.ViewHolder> {
     private Context context;
     private List<Category> categories;
     private RecyclerViewItemInterface viewItemInterface;
@@ -22,7 +22,7 @@ public class MainCategoryAdapter extends RecyclerView.Adapter<MainCategoryAdapte
     public void setViewItemInterface(RecyclerViewItemInterface viewItemInterface) {
         this.viewItemInterface = viewItemInterface;
     }
-    public MainCategoryAdapter(Context context, List<Category> categories) {
+    public CategoryAdapterOnlyName(Context context, List<Category> categories) {
         this.context = context;
         this.categories = categories;
     }

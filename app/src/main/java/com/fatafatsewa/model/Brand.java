@@ -1,17 +1,17 @@
 package com.fatafatsewa.model;
 
 public class Brand {
-    private int name;
+    private int image;
 
-    public int getName() {
-        return name;
+    public int getImage() {
+        return image;
     }
 
-    public void setName(int name) {
-        this.name = name;
+    public void setImage(int image) {
+        this.image = image;
     }
 
-    public Brand(int name) {
-        this.name = name;
+    public Brand(int image) {
+        this.image = image;
     }
 }

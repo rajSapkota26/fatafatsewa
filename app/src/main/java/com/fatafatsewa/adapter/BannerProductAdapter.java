@@ -5,26 +5,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.fatafatsewa.R;
-import com.fatafatsewa.model.Sponser;
+import com.fatafatsewa.model.BannerProduct;
 
 import java.util.List;
 
-public class SponserAdapter extends RecyclerView.Adapter<SponserAdapter.ViewHolder>{
+public class BannerProductAdapter extends RecyclerView.Adapter<BannerProductAdapter.ViewHolder>{
     private Context context;
-    private List<Sponser> sponsers;
-    ProductAdapter adapter;
+    private List<BannerProduct> sponsers;
+   private ProductAdapter adapter;
 
-    public SponserAdapter(Context context, List<Sponser> sponsers) {
+    public BannerProductAdapter(Context context, List<BannerProduct> sponsers) {
         this.context = context;
         this.sponsers = sponsers;
     }
@@ -32,13 +30,13 @@ public class SponserAdapter extends RecyclerView.Adapter<SponserAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(context).inflate(R.layout.sample_sponser,parent,false);
+        View view= LayoutInflater.from(context).inflate(R.layout.sample_banner_product,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Sponser sponser=sponsers.get(position);
+        BannerProduct sponser=sponsers.get(position);
         adapter=new ProductAdapter(context,sponser.getProducts());
         holder.catName.setText(sponser.getName());
         Glide.with(context).load(sponser.getImage()).placeholder(R.drawable.img_product).into(holder.sponser_img_brand);

@@ -15,24 +15,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.fatafatsewa.R;
 import com.fatafatsewa.adapter.BrandAdapter;
-import com.fatafatsewa.adapter.CategoryAdapter;
+import com.fatafatsewa.adapter.CategoryAdapterNameWithImage;
 import com.fatafatsewa.adapter.ImageSliderAdapter;
 import com.fatafatsewa.adapter.ProductAdapter;
-import com.fatafatsewa.adapter.SponserAdapter;
+import com.fatafatsewa.adapter.BannerProductAdapter;
 import com.fatafatsewa.databinding.FragmentHomeBinding;
 import com.fatafatsewa.demolist.Demolist;
 import com.fatafatsewa.model.Brand;
 import com.fatafatsewa.model.Category;
 import com.fatafatsewa.model.Product;
 import com.fatafatsewa.model.SliderItem;
-import com.fatafatsewa.model.Sponser;
+import com.fatafatsewa.model.BannerProduct;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
-import com.smarteist.autoimageslider.SliderView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -43,7 +40,7 @@ public class HomeFragment extends Fragment {
     private List<SliderItem> sliderItem;
 
     //category list
-    private CategoryAdapter categoryAdapter;
+    private CategoryAdapterNameWithImage categoryAdapter;
     private List<Category> categories;
     //banner list
     private BrandAdapter brandAdapter;
@@ -56,8 +53,8 @@ public class HomeFragment extends Fragment {
    CountDownTimer timer;
 
    //sponser
-   private List<Sponser> sponsers;
-   private SponserAdapter sponserAdapter;
+   private List<BannerProduct> sponsers;
+   private BannerProductAdapter sponserAdapter;
    //product list
     private List<Product> products;
     private ProductAdapter productAdapter;
@@ -114,7 +111,7 @@ public class HomeFragment extends Fragment {
     private void sponserLists() {
         sponsers=Demolist.getAllSponserItem();
         binding.mainSponserRecyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
-        sponserAdapter=new SponserAdapter(getContext(),sponsers);
+        sponserAdapter=new BannerProductAdapter(getContext(),sponsers);
         binding.mainSponserRecyclerview.setAdapter(sponserAdapter);
         sponserAdapter.notifyDataSetChanged();
     }
@@ -180,7 +177,7 @@ public class HomeFragment extends Fragment {
 
     private void setCategoryviewMore(List<Category> c) {
         binding.mainCategoryRecyclerview.setLayoutManager(new GridLayoutManager(getContext(), 4));
-        categoryAdapter = new CategoryAdapter(getContext(), c);
+        categoryAdapter = new CategoryAdapterNameWithImage(getContext(), c);
         binding.mainCategoryRecyclerview.setAdapter(categoryAdapter);
         adapter.notifyDataSetChanged();
     }
@@ -189,7 +186,7 @@ public class HomeFragment extends Fragment {
     private void setCategoryviewless(List<Category> c) {
         c = categories.subList(0, 4);
         binding.mainCategoryRecyclerview.setLayoutManager(new GridLayoutManager(getContext(), 4));
-        categoryAdapter = new CategoryAdapter(getContext(), c);
+        categoryAdapter = new CategoryAdapterNameWithImage(getContext(), c);
         binding.mainCategoryRecyclerview.setAdapter(categoryAdapter);
         adapter.notifyDataSetChanged();
     }

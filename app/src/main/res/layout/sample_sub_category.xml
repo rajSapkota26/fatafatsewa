@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/_2mdp"
+    android:orientation="vertical">
+
+
+        <ImageView
+            android:background="@color/orange"
+            android:id="@+id/main_sub_cat_image"
+            android:layout_width="@dimen/_55mdp"
+            android:layout_height="@dimen/_55mdp"
+            android:src="@drawable/ic_camera"
+            android:scaleType="fitXY" />
+
+
+    <TextView
+        android:id="@+id/catsub_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:layout_marginTop="@dimen/_3mdp"
+        android:textAlignment="center"
+        android:maxLength="15"
+        android:paddingBottom="@dimen/_5mdp"
+        android:text="Home Applience"
+        android:gravity="center_horizontal" />
+</LinearLayout>

@@ -2,12 +2,12 @@ package com.fatafatsewa.model;
 
 import java.util.List;
 
-public class Sponser {
+public class BannerProduct {
     private String name;
     private List<Product> products;
     private int image;
 
-    public Sponser(String name, int image, List<Product> products) {
+    public BannerProduct(String name, int image, List<Product> products) {
         this.name = name;
         this.products = products;
         this.image = image;
