@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_1mdp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_1mdp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/sponser_cat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/_5mdp"
+            android:text="Top category" />
+
+        <TextView
+            android:id="@+id/sponser_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:drawableRight="@drawable/ic_viewmore"
+            android:drawableTint="@color/orange"
+            android:drawablePadding="@dimen/_3mdp"
+            android:text="See All"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sponser_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_1mdp"
+        android:layout_height="wrap_content"/>
+    <!--Banner -->
+    <ImageView
+        android:id="@+id/sponser_img_brand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55mdp"
+        android:src="@drawable/img_brand"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/_1mdp" />
+</LinearLayout>

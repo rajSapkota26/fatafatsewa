@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_order"
+            android:title="@string/orders" />
+        <item
+            android:id="@+id/nav_insurence"
+            android:icon="@drawable/ic_insurence"
+            android:title="@string/insurence" />
+        <item
+            android:id="@+id/nav_cashpoint"
+            android:icon="@drawable/ic_cashpoint"
+            android:title="@string/cashpoints" />
+        <item
+            android:id="@+id/nav_statement"
+            android:icon="@drawable/ic_statement"
+            android:title="@string/statements" />
+        <item
+            android:id="@+id/nav_followed_shop"
+            android:icon="@drawable/ic_shop"
+            android:title="@string/followed_shop" />
+        <item
+android:id="@+id/nav_wishpot"
+            android:icon="@drawable/ic_home"
+            android:title="@string/wishpot" />
+    </group>
+
+
+
+    <item android:title="@string/share">
+        <menu>
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_share_share"
+                    android:icon="@drawable/ic_share"
+                    android:title="@string/share" />
+                <item
+                    android:id="@+id/nav_share_rateus"
+                    android:icon="@drawable/ic_rate"
+                    android:title="@string/rate_us" />
+
+
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/nav_support"
+        android:icon="@drawable/ic_supports"
+        android:title="@string/supports" />
+    <item
+        android:id="@+id/nav_faqs"
+        android:icon="@drawable/ic_faq"
+        android:title="@string/faqs" />
+</menu>

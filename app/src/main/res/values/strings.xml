@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FatafatSewa</string>
+    <string name="home">Home</string>
+    <string name="orders">Orders</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="faqs">FAQs</string>
+    <string name="supports">Supports</string>
+    <string name="rate_us">Rate us</string>
+    <string name="share">Share</string>
+    <string name="wishpot">WishPot</string>
+    <string name="followed_shop">Followed Shop</string>
+    <string name="statements">Statements</string>
+    <string name="cashpoints">CashPoints</string>
+    <string name="insurence">Insurence</string>
+    <string name="search">search</string>
+    <string name="mobile">Mobile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_more">View More</string>
+    <string name="deals">Deals</string>
+    <string name="category">Category</string>
+    <string name="view_less">View Less</string>
+    <string name="submit">Submit</string>
+</resources>

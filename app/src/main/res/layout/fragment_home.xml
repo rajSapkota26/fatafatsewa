@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+           <!--gif loader -->
+            <ImageView
+                android:id="@+id/bannergif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1mdp" />
+
+            <!--slide  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110mdp"
+                android:layout_marginTop="@dimen/_1mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110mdp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="@dimen/_2mdp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorRadius="@dimen/_1mdp"
+                    app:sliderIndicatorSelectedColor="@color/orange"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="3"
+                    app:sliderStartAutoCycle="true" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Category List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_category_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/category_view_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_text_full"
+                        android:padding="@dimen/_3mdp"
+                        android:text="@string/view_more"
+                        android:layout_marginBottom="@dimen/_1mdp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/category_view_less"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_text"
+                        android:backgroundTint="@color/orange"
+                        android:padding="@dimen/_3mdp"
+                        android:layout_marginBottom="@dimen/_1mdp"
+                        android:text="@string/view_less"
+                        android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!--Brand List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/_20font_mdp"
+                   android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:text="BRAND" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/main_brands_recyclerview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+            <!--Banner -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35mdp"
+                android:src="@drawable/img_brand"
+                android:scaleType="fitXY"
+                android:layout_marginTop="@dimen/_1mdp" />
+
+            <!--Flash sale -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:weightSum="5">
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent"
+                   android:gravity="center"
+                   android:layout_weight="2"
+                   android:orientation="vertical">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+
+                       android:textColor="@color/orange"
+                       android:textStyle="bold"
+                       android:textSize="@dimen/_12font_mdp"
+                       android:gravity="center"
+                       android:text="Flash Sale" />
+
+
+                   <TextView
+                       android:id="@+id/fleshsell_timer"
+                       android:layout_width="@dimen/_75mdp"
+                       android:layout_height="wrap_content"
+                       android:textColor="@color/orange"
+                       android:textStyle="bold"
+                       android:textSize="@dimen/_16font_mdp"
+                       android:gravity="center_horizontal"
+                       android:text="00Hr:00Min:00"/>
+
+
+               </LinearLayout>
+
+               <ImageView
+                   android:layout_weight="3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="@dimen/_75mdp"
+                   android:src="@drawable/img_fleshsell_testing"
+                   android:scaleType="fitXY"/>
+            </LinearLayout>
+            <!--product of the day -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/main_sponser_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--All product List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Our Products" />
+
+                <TextView
+                    android:id="@+id/main_product_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:drawableRight="@drawable/ic_viewmore"
+                    android:drawableTint="@color/orange"
+                    android:drawablePadding="@dimen/_3mdp"
+                    android:text="See All"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/main_product_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <!--Top product List -->
+            <!--Top Rated product -->
+            <!--Top product List -->
+            <!--Top product List -->
+            <!--Top product List -->
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
