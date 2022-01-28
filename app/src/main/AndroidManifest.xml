@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.FatafatSewa">
-        <activity android:name=".activity.ProductDetailsActivity"></activity>
+        <activity android:name=".activity.ProductListElectronicActivity"></activity>
+        <activity android:name=".activity.ProductDetailsActivity" />
         <activity android:name=".activity.QRActivity" />
         <activity android:name=".activity.FAQSActivity" />
         <activity android:name=".loginorregister.RegisterActivity" />

@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".fragments.InnerCategoryFragment">
 
-
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/defaultpage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/_20mdp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
+
 
         <LinearLayout
-            android:id="@+id/defaultpage"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -52,25 +51,48 @@
                 android:id="@+id/cat_subcategory_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/_2mdp"
                 android:background="@color/white" />
 
         </LinearLayout>
 
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/catChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <LinearLayout
-            android:id="@+id/catChange"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/changed_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="catName"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/_10font_mdp"
+                android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cat_subcategorychangewithcategory_recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_500mdp"
-                android:layout_marginRight="@dimen/_2mdp"
-                android:background="@color/white" />
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                tools:listitem="@layout/sample_sub_category" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cat_subcategoryfiltercategory_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                tools:listitem="@layout/sample_filter_category" />
         </LinearLayout>
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>

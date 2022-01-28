@@ -4,20 +4,20 @@ import java.util.List;
 
 public class FilterCategory {
     private String name;
-    private List<Product> products;
+    private List<SubCategory> products;
     private int image;
 
-    public FilterCategory(String name, int image, List<Product> products) {
+    public FilterCategory(String name, int image, List<SubCategory> products) {
         this.name = name;
         this.products = products;
         this.image = image;
     }
 
-    public List<Product> getProducts() {
+    public List<SubCategory> getProducts() {
         return products;
     }
 
-    public void setProducts(List<Product> products) {
+    public void setProducts(List<SubCategory> products) {
         this.products = products;
     }
 

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProductListElectronicActivity">
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/_8mdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/main_addBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:layout_marginLeft="@dimen/_15mdp"
+            android:layout_marginRight="@dimen/_15mdp"
+            android:background="@drawable/bg_text"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/_5mdp"
+            android:hint="@string/search"
+            android:padding="@dimen/_7mdp"
+            android:textColor="@color/orange" />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <!--slide  -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110mdp"
+                android:layout_marginTop="@dimen/_1mdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/productimageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110mdp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="true"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="@dimen/_2mdp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorRadius="@dimen/_1mdp"
+                    app:sliderIndicatorSelectedColor="@color/orange"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="3"
+                    app:sliderStartAutoCycle="true" />
+
+            </androidx.cardview.widget.CardView>
+            <!-- trending category-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Trending Now" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:drawableRight="@drawable/ic_viewmore"
+                    android:drawableTint="@color/orange"
+                    android:drawablePadding="@dimen/_3mdp"
+                    android:text="See All"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trending_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <!-- fatafat deals category-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Fatafat Mahadeals" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:drawableRight="@drawable/ic_viewmore"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="@dimen/_3mdp"
+                    android:text="24 Hours left"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fatafat_deals_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- shop by brand-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Shop By Brands" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fatafat_shopbybrand_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- fatafat flagship model category-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Flagship model" />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fatafat_flagship_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- fatafat budget model category-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Budget Model" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:drawableRight="@drawable/ic_viewmore"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="@dimen/_3mdp"
+                    android:text="View All"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fatafat_budget_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- fatafat shop by price model category-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Shop by price" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:drawableRight="@drawable/ic_viewmore"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="@dimen/_3mdp"
+                    android:text="View All"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fatafat_byprice_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!-- all product-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/_1mdp"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:text="Just For You" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fatafat_allproduct_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

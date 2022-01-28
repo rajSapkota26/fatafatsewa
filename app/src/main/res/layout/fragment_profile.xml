@@ -1,59 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".fragments.ProfileFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImage_ac"
         android:layout_width="@dimen/_96mdp"
         android:layout_height="@dimen/_96mdp"
-        android:layout_marginTop="@dimen/_40mdp"
+        android:layout_marginTop="@dimen/_10mdp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_profile"
         app:civ_border_color="@color/blue"
-        app:civ_border_width="@dimen/_2mdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:civ_border_width="@dimen/_2mdp"/>
 
     <TextView
         android:id="@+id/pp_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+977 9846440376"
-        android:layout_marginTop="@dimen/_15mdp"
-        app:layout_constraintEnd_toEndOf="@+id/profileImage_ac"
-        app:layout_constraintStart_toStartOf="@+id/profileImage_ac"
-        app:layout_constraintTop_toBottomOf="@+id/profileImage_ac" />
+        android:layout_marginTop="@dimen/_3mdp" />
 
     <TextView
         android:id="@+id/address_ac1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:padding="@dimen/_10mdp"
-        android:layout_margin="@dimen/_15mdp"
+        android:text="Edit Profile"
+        android:padding="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:layout_margin="@dimen/_3mdp"
         android:drawableRight="@drawable/ic_viewmore"
-        android:background="@drawable/bg_text"
-        app:layout_constraintEnd_toEndOf="@+id/pp_account"
-        app:layout_constraintStart_toStartOf="@+id/pp_account"
-        app:layout_constraintTop_toBottomOf="@+id/pp_account" />
+        android:background="@drawable/bg_text" />
     <TextView
         android:id="@+id/address_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Orders"
-        android:padding="@dimen/_10mdp"
-        android:layout_margin="@dimen/_15mdp"
+        android:text="My Orders"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:padding="@dimen/_8mdp"
+        android:layout_margin="@dimen/_3mdp"
         android:drawableRight="@drawable/ic_viewmore"
-        android:background="@drawable/bg_text"
-        app:layout_constraintEnd_toEndOf="@+id/address_ac1"
-        app:layout_constraintStart_toStartOf="@+id/address_ac1"
-        app:layout_constraintTop_toBottomOf="@+id/address_ac1" />
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Favorite"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:padding="@dimen/_8mdp"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Credit and Coupnes"
+        android:padding="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Refer and Earn"
+        android:padding="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invite friends"
+        android:padding="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address"
+        android:padding="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Account setting"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:padding="@dimen/_8mdp"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:padding="@dimen/_8mdp"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

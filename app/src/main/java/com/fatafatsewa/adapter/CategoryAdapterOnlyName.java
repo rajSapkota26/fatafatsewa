@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,17 +15,22 @@ import com.fatafatsewa.model.Category;
 
 import java.util.List;
 
+import static com.fatafatsewa.R.color.color_white;
+
 public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapterOnlyName.ViewHolder> {
     private Context context;
     private List<Category> categories;
     private RecyclerViewItemInterface viewItemInterface;
+    private int selectedItem;
 
     public void setViewItemInterface(RecyclerViewItemInterface viewItemInterface) {
         this.viewItemInterface = viewItemInterface;
     }
+
     public CategoryAdapterOnlyName(Context context, List<Category> categories) {
         this.context = context;
         this.categories = categories;
+        selectedItem=0;
     }
 
     @NonNull
@@ -43,10 +49,25 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
             @Override
             public void onClick(View view) {
                 if (viewItemInterface != null) {
-                    viewItemInterface.onItemClick(holder.getAdapterPosition(),category.getName());
+
+                    int previousItem = selectedItem;
+                    selectedItem = position;
+
+                    notifyItemChanged(previousItem);
+                    notifyItemChanged(position);
+
+                    viewItemInterface.onItemClick(holder.getAdapterPosition(), category.getName());
                 }
             }
         });
+        if (selectedItem == position) {
+            holder.linearLayout_sc.setBackgroundColor(context.getResources().getColor(R.color.white));
+        }
+
+
+
+
+
 
     }
 
@@ -57,12 +78,15 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
+        LinearLayout linearLayout_sc;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.catName);
+            linearLayout_sc = itemView.findViewById(R.id.linearLayout_sc);
         }
     }
+
     public interface RecyclerViewItemInterface {
 
         void onItemClick(int position, String catName);

@@ -4,25 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
     android:orientation="vertical"
-    android:background="@color/orange"
     tools:context=".loginorregister.LoginActivity">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:layout_gravity="center"
+            android:text="Fatafat Sewa"
 
-            android:textSize="@dimen/_16font_mdp"
-            android:text="Fatafat Sewa" />
+            android:textColor="@color/orange"
+            android:textSize="@dimen/_16font_mdp" />
 
         <ImageView
             android:layout_width="@dimen/_60mdp"
@@ -36,38 +35,38 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="@dimen/_50mdp"
-
+        android:orientation="horizontal"
         android:weightSum="4">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/_250mdp"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            android:background="#E040FB"
+            android:layout_weight="2"
             android:orientation="vertical">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_85mdp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_btn_blue"
-                android:text="Login"
+                android:layout_marginTop="@dimen/_25mdp"
                 android:layout_marginBottom="@dimen/_15mdp"
+                android:background="@drawable/bg_btn_blue"
+                android:text="Signup"
                 app:backgroundTint="@null" />
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/_85mdp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15mdp"
                 android:background="@drawable/bg_btn_orange"
-                android:text="signup"
+                android:text="Login"
                 app:backgroundTint="@null" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="@dimen/_20mdp"
+                android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
@@ -101,90 +100,95 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/_15mdp"
-            android:layout_weight="3.5"
-           android:paddingLeft="@dimen/_15mdp"
-            android:paddingRight="@dimen/_15mdp"
-            android:background="@color/blue"
-
-            android:orientation="vertical">
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_5mdp"
+            android:paddingRight="@dimen/_5mdp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_15mdp"
+                android:text="Login Here"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16font_mdp"
-                android:textStyle="bold"
-                android:text="Login Here" />
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15mdp"
-                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_10mdp"
                 android:drawableRight="@drawable/ic_add"
-                android:text="UserName" />
+                android:drawableTint="@color/white"
+
+                android:text="UserName"
+                android:textColor="@color/white" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_text_full"
-                android:padding="@dimen/_15mdp" />
+                android:padding="@dimen/_7mdp" />
 
             <TextView
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15mdp"
                 android:drawableRight="@drawable/ic_add"
-                android:text="UserName" />
+                android:drawableTint="@color/white"
+                android:text="UserName"
+                android:textColor="@color/white" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_text_full"
-                android:padding="@dimen/_15mdp" />
+                android:padding="@dimen/_7mdp" />
 
             <TextView
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15mdp"
                 android:drawableRight="@drawable/ic_add"
-                android:text="UserName" />
+                android:text="UserName"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_text_full"
-                android:padding="@dimen/_15mdp" />
+                android:padding="@dimen/_7mdp" />
 
             <TextView
-                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15mdp"
                 android:drawableRight="@drawable/ic_add"
-                android:text="UserName" />
+                android:text="UserName"
+                android:drawableTint="@color/white"
+                android:textColor="@color/white" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_text_full"
                 android:layout_marginBottom="@dimen/_15mdp"
-                android:padding="@dimen/_15mdp" />
+                android:background="@drawable/bg_text_full"
+                android:padding="@dimen/_7mdp" />
+
             <Button
                 android:layout_width="@dimen/_150mdp"
                 android:layout_height="wrap_content"
-                android:text="Login"
                 android:layout_gravity="center"
-               android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_55mdp"
+                android:background="@drawable/bg_btn_white"
                 android:padding="@dimen/_5mdp"
+                android:text="Login"
+                android:textColor="@color/black"
                 android:textSize="@dimen/_16font_mdp"
-                android:background="@drawable/bg_halfcorner"
                 app:backgroundTint="@null" />
         </LinearLayout>
     </LinearLayout>

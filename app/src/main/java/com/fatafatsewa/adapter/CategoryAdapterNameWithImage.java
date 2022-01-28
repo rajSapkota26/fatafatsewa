@@ -1,6 +1,7 @@
 package com.fatafatsewa.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.fatafatsewa.R;
+import com.fatafatsewa.activity.ProductListElectronicActivity;
 import com.fatafatsewa.model.Category;
 
 import java.util.List;
@@ -37,6 +39,12 @@ public class CategoryAdapterNameWithImage extends RecyclerView.Adapter<CategoryA
         Category category=categories.get(position);
         holder.cat_name.setText(category.getName());
         Glide.with(context).load(category.getImage()).placeholder(R.drawable.ic_camera).into(holder.main_cat_image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, ProductListElectronicActivity.class));
+            }
+        });
 
     }
 
