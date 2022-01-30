@@ -4,17 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/_35mdp"
+    android:orientation="vertical"
     tools:context=".fragments.CartFragment">
 
-    <TextView
-        android:id="@+id/text_mcart"
+    <ImageView
+        android:id="@+id/cart_brand_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_10mdp"
-        android:text="My cart List "
-        android:textColor="@color/orange"
-        android:textSize="@dimen/_16font_mdp"
+        android:layout_height="@dimen/_60mdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_brand"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,10 +21,36 @@
         android:id="@+id/cart_mycartRecycler"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/_10mdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btmview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_mcart"
-        tools:listitem="@layout/sample_mycart" />
+        app:layout_constraintTop_toBottomOf="@+id/cart_brand_image" />
+
+<LinearLayout
+    android:id="@+id/btmview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/cat_selectAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select All"
+        android:layout_marginRight="@dimen/_15mdp"
+        android:buttonTint="@color/orange"
+        android:layout_gravity="center_vertical" />
+    <Button
+        android:id="@+id/cart_orderNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_text_full"
+        android:text="Check out"
+        app:backgroundTint="@null" />
+
+</LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

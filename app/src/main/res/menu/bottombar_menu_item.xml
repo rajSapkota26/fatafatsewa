@@ -13,8 +13,8 @@
         android:icon="@drawable/ic_category" />
     <item
         android:id="@+id/btm_deals"
-        android:title="@string/deals"
-        android:icon="@drawable/ic_order" />
+        android:title="Voice"
+        android:icon="@drawable/ic_voicerecord" />
 
     <item
         android:id="@+id/btm_cart"

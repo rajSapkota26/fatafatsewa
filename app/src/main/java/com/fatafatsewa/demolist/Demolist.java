@@ -2,6 +2,7 @@ package com.fatafatsewa.demolist;
 
 import com.fatafatsewa.R;
 import com.fatafatsewa.model.Brand;
+import com.fatafatsewa.model.Cart;
 import com.fatafatsewa.model.Category;
 import com.fatafatsewa.model.FilterCategory;
 import com.fatafatsewa.model.Product;
@@ -139,6 +140,19 @@ public class Demolist {
         l.add(new FilterCategory("new Arriavle", R.drawable.img_brand, getAllsubcategoryItem()));
         l.add(new FilterCategory("Top products", R.drawable.img_brand, getAllsubcategoryItem()));
         l.add(new FilterCategory("Top products", R.drawable.img_brand, getAllsubcategoryItem()));
+
+
+        return l;
+    }
+    public static List<Cart> getAllcartItem() {
+        List<Cart> l = new ArrayList<>();
+
+        l.add(new Cart("Top products",1, R.drawable.img_product_six, 2500.00));
+        l.add(new Cart("Top products",1, R.drawable.img_product_five, 2500.00));
+        l.add(new Cart("Top products",1, R.drawable.img_product_four, 2500.00));
+        l.add(new Cart("Top products",1, R.drawable.img_product_three, 2500.00));
+        l.add(new Cart("Top products",1, R.drawable.img_product_two, 2500.00));
+        l.add(new Cart("Top products",1, R.drawable.img_product, 2500.00));
 
 
         return l;

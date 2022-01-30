@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="@dimen/_5mdp"
-    android:layout_margin="@dimen/_5mdp"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_3mdp"
     android:elevation="@dimen/_10mdp"
-    android:layout_height="wrap_content">
+    android:padding="@dimen/_5mdp">
 
 
     <LinearLayout
@@ -19,6 +18,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/productChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:buttonTint="@color/orange" />
 
             <ImageView
                 android:id="@+id/cart_image"
@@ -40,26 +46,97 @@
                     android:padding="@dimen/_5mdp"
                     android:text="Product:" />
 
-                <TextView
-                    android:id="@+id/cart_items"
-                    android:layout_width="match_parent"
-                    android:padding="@dimen/_5mdp"
-                    android:layout_height="wrap_content"
-                    android:text="Items:" />
 
-                <TextView
-                    android:id="@+id/cart_price"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5mdp"
+                    android:layout_marginRight="@dimen/_5mdp"
+                    android:layout_marginBottom="@dimen/_10mdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                       android:gravity="center_horizontal"
+                        android:text="Rs: " />
+
+                    <TextView
+                    android:id="@+id/cart_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:padding="@dimen/_5mdp"
-                    android:text="Price:" />
+                    android:text="25000.00" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5mdp"
+                    android:layout_marginRight="@dimen/_5mdp"
+                    android:layout_marginBottom="@dimen/_10mdp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/itemminus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_orange"
+                        android:gravity="center_horizontal"
+                        android:text="-"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/cart_items"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_5mdp"
+                        android:layout_weight="2"
+                        android:gravity="center_horizontal"
+                        android:hint="1"
+                        android:padding="@dimen/_7mdp"
+                        android:textColor="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/itemplus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn_orange"
+                        android:gravity="center_horizontal"
+                        android:text="+"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="@dimen/_5mdp"
+            android:layout_marginRight="@dimen/_5mdp"
+            android:layout_marginBottom="@dimen/_10mdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/main_addBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5mdp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_text"
+                android:hint="Enter coupon code"
+                android:padding="@dimen/_7mdp"
+                android:textColor="@color/orange" />
 
             <Button
                 android:id="@+id/cart_orderNow"
@@ -67,11 +144,11 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/bg_text_full"
-                app:backgroundTint="@null"
-                android:layout_marginRight="@dimen/_10mdp"
-                android:text="Order now" />
+                android:text="Apply"
 
+                app:backgroundTint="@null" />
 
         </LinearLayout>
+
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
