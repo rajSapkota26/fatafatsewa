@@ -14,12 +14,19 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical">
-
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/product_image"
-            android:layout_width="@dimen/_100mdp"
-            android:layout_height="@dimen/_100mdp"
-            android:src="@drawable/img_product" />
+            android:layout_width="@dimen/_96mdp"
+            android:layout_height="@dimen/_96mdp"
+            android:layout_marginTop="@dimen/_10mdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_product"
+            app:civ_border_color="@color/white"
+            android:elevation="@dimen/_10mdp"
+            android:padding="@dimen/_1mdp"
+            android:background="@drawable/bg_circle"
+            app:civ_border_width="@dimen/_1mdp"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,31 +44,47 @@
                 android:textColor="@color/orange"
                 android:textSize="14sp" />
 
+            <TextView
+                android:id="@+id/product_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$350"
+                android:textColor="@color/orange"
+                android:textSize="13sp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_3mdp"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:id="@+id/product_rate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$350"
-                    android:textColor="@color/orange"
-                    android:textSize="13sp" />
-
-
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/_3mdp">
 
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:tint="@color/white"
+                    android:background="@drawable/bg_text_full"
+                    android:src="@drawable/ic_cart" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:tint="@color/white"
+                    android:layout_marginLeft="@dimen/_5mdp"
+                    android:layout_marginRight="@dimen/_5mdp"
                     android:background="@drawable/bg_text_full"
                     android:src="@drawable/ic_add" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:tint="@color/white"
+                    android:background="@drawable/bg_text_full"
+                    android:src="@drawable/ic_home" />
 
 
             </LinearLayout>

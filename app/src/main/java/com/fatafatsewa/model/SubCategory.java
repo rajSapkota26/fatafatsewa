@@ -1,6 +1,7 @@
 package com.fatafatsewa.model;
 
 public class SubCategory {
+    private int id;
     private String name;
     private int image;
 

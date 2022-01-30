@@ -6,41 +6,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.CategoryFragment">
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="5"
     android:orientation="horizontal">
+
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/orange"
-            android:text="Just For you"/>
+            android:text="Just For you"
+            android:textColor="@color/orange" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cat_cat_recyclerview"
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            tools:listitem="@layout/sample_category"
             android:layout_height="match_parent"
-            />
+            android:layout_weight="1"
+            tools:listitem="@layout/sample_category" />
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/cat_fragment_container"
-        android:layout_weight="3"
-        android:layout_marginLeft="@dimen/_3mdp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_weight="3"
         app:layout_constraintBottom_toTopOf="@+id/bottomBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        />
-</LinearLayout>
+        app:layout_constraintStart_toEndOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>

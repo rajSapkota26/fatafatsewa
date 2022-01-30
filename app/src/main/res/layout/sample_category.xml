@@ -9,7 +9,6 @@
     android:id="@+id/catName"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:maxWidth="@dimen/_60mdp"
     android:maxLength="18"
     android:text="Home Applience"
      />

@@ -30,7 +30,7 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
     public CategoryAdapterOnlyName(Context context, List<Category> categories) {
         this.context = context;
         this.categories = categories;
-        selectedItem=0;
+        selectedItem=-1;
     }
 
     @NonNull
@@ -61,7 +61,9 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
             }
         });
         if (selectedItem == position) {
-            holder.linearLayout_sc.setBackgroundColor(context.getResources().getColor(R.color.white));
+            holder.name.setTextColor(context.getResources().getColor(R.color.orange));
+        }else {
+            holder.name.setTextColor(context.getResources().getColor(R.color.black));
         }
 
 
