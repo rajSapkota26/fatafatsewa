@@ -1,15 +1,24 @@
 package com.fatafatsewa.model;
 
 public class SliderItem {
-    private int imageUrl;
+    private int id;
+    private String imageLink;
     private String description;
 
-    public SliderItem() {
+    public int getId() {
+        return id;
     }
 
-    public SliderItem(int imageUrl, String description) {
-        this.imageUrl = imageUrl;
-        this.description = description;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
     }
 
     public String getDescription() {
@@ -20,11 +29,5 @@ public class SliderItem {
         this.description = description;
     }
 
-    public int getImageUrl() {
-        return imageUrl;
-    }
 
-    public void setImageUrl(int imageUrl) {
-        this.imageUrl = imageUrl;
-    }
 }

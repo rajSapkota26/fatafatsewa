@@ -6,13 +6,72 @@
     android:layout_height="match_parent"
     tools:context=".activity.FAQSActivity">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="FAQSActivity "
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="@dimen/_25mdp"
+        app:cardCornerRadius="@dimen/_10mdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10mdp"
+            tools:listitem="@layout/sample_faq"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Follow Us On:"
+            android:textSize="@dimen/_30mdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5mdp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="@dimen/_50mdp"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:layout_width="@dimen/_50mdp"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:layout_width="@dimen/_50mdp"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_facebook" />
+
+            <ImageView
+                android:layout_width="@dimen/_50mdp"
+                android:layout_height="@dimen/_50mdp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_facebook" />
+        </LinearLayout>
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

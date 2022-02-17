@@ -3,11 +3,34 @@ package com.fatafatsewa.model;
 public class SubCategory {
     private int id;
     private String name;
-    private int image;
+    private String imageLink;
+    private int filterCategoryId;
 
-    public SubCategory(String name, int image) {
-        this.name = name;
-        this.image = image;
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
+    }
+
+    public int getFilterCategoryId() {
+        return filterCategoryId;
+    }
+
+    public void setFilterCategoryId(int filterCategoryId) {
+        this.filterCategoryId = filterCategoryId;
     }
 
     public String getName() {
@@ -18,11 +41,5 @@ public class SubCategory {
         this.name = name;
     }
 
-    public int getImage() {
-        return image;
-    }
 
-    public void setImage(int image) {
-        this.image = image;
-    }
 }

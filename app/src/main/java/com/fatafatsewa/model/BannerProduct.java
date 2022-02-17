@@ -3,14 +3,32 @@ package com.fatafatsewa.model;
 import java.util.List;
 
 public class BannerProduct {
+    private int id;
     private String name;
     private List<Product> products;
-    private int image;
+    private String imageLink;
 
-    public BannerProduct(String name, int image, List<Product> products) {
+    public BannerProduct(int id, String name, List<Product> products, String imageLink) {
+        this.id = id;
         this.name = name;
         this.products = products;
-        this.image = image;
+        this.imageLink = imageLink;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<Product> getProducts() {
@@ -21,20 +39,11 @@ public class BannerProduct {
         this.products = products;
     }
 
-    public int getImage() {
-        return image;
+    public String getImageLink() {
+        return imageLink;
     }
 
-    public void setImage(int image) {
-        this.image = image;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
     }
 }

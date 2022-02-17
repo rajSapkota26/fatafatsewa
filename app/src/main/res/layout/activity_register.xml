@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/bg_login"
+    android:orientation="vertical"
     tools:context=".loginorregister.RegisterActivity">
 
     <LinearLayout
@@ -13,17 +13,10 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Fatafat Sewa"
 
-            android:textColor="@color/orange"
-            android:textSize="@dimen/_16font_mdp" />
 
         <ImageView
-            android:layout_width="@dimen/_60mdp"
+            android:layout_width="@dimen/_90mdp"
             android:layout_height="@dimen/_60mdp"
             android:layout_marginLeft="@dimen/_25mdp"
             android:background="@color/white"
@@ -66,11 +59,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20mdp"
                 android:gravity="center"
+
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20mdp"
                     android:layout_marginBottom="@dimen/_7mdp"
                     android:background="@drawable/bg_circle"
                     android:padding="@dimen/_10mdp"
@@ -80,6 +75,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20mdp"
                     android:layout_marginBottom="@dimen/_7mdp"
                     android:background="@drawable/bg_circle"
                     android:padding="@dimen/_10mdp"
@@ -89,6 +85,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20mdp"
                     android:layout_marginBottom="@dimen/_7mdp"
                     android:background="@drawable/bg_circle"
                     android:padding="@dimen/_10mdp"
@@ -152,8 +149,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15mdp"
                 android:drawableRight="@drawable/ic_add"
-                android:text="UserName"
                 android:drawableTint="@color/white"
+                android:text="UserName"
                 android:textColor="@color/white" />
 
             <EditText
@@ -167,8 +164,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15mdp"
                 android:drawableRight="@drawable/ic_add"
-                android:text="UserName"
                 android:drawableTint="@color/white"
+                android:text="UserName"
                 android:textColor="@color/white" />
 
             <EditText
@@ -191,7 +188,6 @@
                 app:backgroundTint="@null" />
         </LinearLayout>
     </LinearLayout>
-
 
 
 </LinearLayout>

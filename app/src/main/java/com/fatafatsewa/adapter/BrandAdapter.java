@@ -1,6 +1,7 @@
 package com.fatafatsewa.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.fatafatsewa.R;
+import com.fatafatsewa.activity.ProductListElectronicActivity;
 import com.fatafatsewa.model.Brand;
 
 import java.util.List;
@@ -34,7 +36,15 @@ public class BrandAdapter extends RecyclerView.Adapter<BrandAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Brand brand = brands.get(position);
-        Glide.with(context).load(brand.getImage()).placeholder(R.drawable.ic_camera).into(holder.image);
+        Glide.with(context).load(brand.getImageLink()).placeholder(R.drawable.ic_camera).into(holder.image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(context, ProductListElectronicActivity.class);
+                intent.putExtra("brandId",brand.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.fatafatsewa.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.fatafatsewa.R;
+import com.fatafatsewa.activity.ProductListElectronicActivity;
 import com.fatafatsewa.model.Category;
 import com.fatafatsewa.model.SubCategory;
 
@@ -37,7 +39,15 @@ public class SubCaregoryAdapter extends RecyclerView.Adapter<SubCaregoryAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         SubCategory category=subCategories.get(position);
         holder.name.setText(category.getName());
-        Glide.with(context).load(category.getImage()).placeholder(R.drawable.ic_camera).into(holder.image);
+        Glide.with(context).load(category.getImageLink()).placeholder(R.drawable.ic_camera).into(holder.image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(context, ProductListElectronicActivity.class);
+                intent.putExtra("subcatId",category.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

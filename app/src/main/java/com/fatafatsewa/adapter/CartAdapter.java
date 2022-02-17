@@ -52,11 +52,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         holder.pname.setText(cart.getpName());
         holder.pItems.setText(String.valueOf(quantity));
         Glide.with(context).load(cart.getImage()).placeholder(R.drawable.img_product).into(holder.pImage);
-        if (selectedItem==0){
-            holder.productChecked.setChecked(false);
-        }else {
-            holder.productChecked.setChecked(true);
-        }
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +101,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView pImage;
         TextView pname, itemplus, pprice,itemMinus,pItems;
-        CheckBox productChecked;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -115,7 +111,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
             itemplus = itemView.findViewById(R.id.itemplus);
             itemMinus = itemView.findViewById(R.id.itemminus);
             pprice = itemView.findViewById(R.id.cart_price);
-            productChecked = itemView.findViewById(R.id.productChecked);
+
         }
     }
 

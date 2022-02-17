@@ -3,11 +3,15 @@ package com.fatafatsewa.model;
 public class Category {
     private int id;
     private String name;
-    private int image;
+    private String imageLink;
 
-    public Category(String name, int image) {
+
+
+    public Category(int id, String name, String imageLink) {
+        this.id = id;
         this.name = name;
-        this.image = image;
+
+        this.imageLink = imageLink;
     }
 
     public String getName() {
@@ -18,11 +22,19 @@ public class Category {
         this.name = name;
     }
 
-    public int getImage() {
-        return image;
+    public int getId() {
+        return id;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImageLink() {
+        return imageLink;
+    }
+
+    public void setImageLink(String imageLink) {
+        this.imageLink = imageLink;
     }
 }

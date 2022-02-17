@@ -38,7 +38,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Product product = products.get(position);
-        Glide.with(context).load(product.getImage()).placeholder(R.drawable.img_product).into(holder.image);
+        Glide.with(context).load(product.getImageLink()).placeholder(R.drawable.img_product).into(holder.image);
         holder.description.setText(Html.fromHtml(product.getName()));
         holder.rate.setText("Rs:" + product.getPrice());
 
@@ -46,7 +46,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ProductDetailsActivity.class);
-//                intent.putExtra("pId", product.getId());
+                intent.putExtra("pId", product.getId());
                 context.startActivity(intent);
             }
         });

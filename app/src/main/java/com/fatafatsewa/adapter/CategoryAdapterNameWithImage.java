@@ -38,11 +38,13 @@ public class CategoryAdapterNameWithImage extends RecyclerView.Adapter<CategoryA
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Category category=categories.get(position);
         holder.cat_name.setText(category.getName());
-        Glide.with(context).load(category.getImage()).placeholder(R.drawable.ic_camera).into(holder.main_cat_image);
+        Glide.with(context).load(category.getImageLink()).placeholder(R.drawable.ic_camera).into(holder.main_cat_image);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                context.startActivity(new Intent(context, ProductListElectronicActivity.class));
+                Intent intent =new Intent(context, ProductListElectronicActivity.class);
+                intent.putExtra("catId",category.getId());
+                context.startActivity(intent);
             }
         });
 

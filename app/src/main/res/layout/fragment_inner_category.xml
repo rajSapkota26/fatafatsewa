@@ -39,19 +39,7 @@
                 android:layout_marginRight="@dimen/_2mdp"
                 android:background="@color/white" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fatafat sewa Recommended :"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/_10font_mdp"
-                android:textStyle="bold" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/cat_subcategory_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white" />
 
         </LinearLayout>
 
@@ -78,13 +66,12 @@
                 android:textSize="@dimen/_10font_mdp"
                 android:textStyle="bold" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/cat_subcategorychangewithcategory_recyclerview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                tools:listitem="@layout/sample_sub_category" />
-
+           <ImageView
+               android:id="@+id/filterImage"
+               android:layout_width="match_parent"
+               android:layout_height="@dimen/_75mdp"
+               android:src="@drawable/img_brand"
+               android:scaleType="fitXY"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/cat_subcategoryfiltercategory_recyclerview"
                 android:layout_width="match_parent"

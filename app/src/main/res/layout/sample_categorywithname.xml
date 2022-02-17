@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="@dimen/_78mdp"
-    android:layout_height="@dimen/_75mdp"
-    android:padding="@dimen/_5mdp"
+    android:layout_height="@dimen/_81mdp"
+    android:padding="@dimen/_2mdp"
     android:orientation="vertical">
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -28,6 +28,7 @@
         android:textColor="@color/orange"
         android:layout_marginTop="@dimen/_3mdp"
         android:textAlignment="center"
-        android:text="@string/mobile"
+        android:text="Home applience"
+        android:padding="@dimen/_3mdp"
         android:gravity="center_horizontal" />
 </LinearLayout>

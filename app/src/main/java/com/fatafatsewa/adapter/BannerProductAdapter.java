@@ -1,6 +1,7 @@
 package com.fatafatsewa.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.fatafatsewa.R;
+import com.fatafatsewa.activity.ProductListElectronicActivity;
 import com.fatafatsewa.model.BannerProduct;
 
 import java.util.List;
@@ -39,10 +41,19 @@ public class BannerProductAdapter extends RecyclerView.Adapter<BannerProductAdap
         BannerProduct sponser=sponsers.get(position);
         adapter=new ProductAdapter(context,sponser.getProducts());
         holder.catName.setText(sponser.getName());
-        Glide.with(context).load(sponser.getImage()).placeholder(R.drawable.img_product).into(holder.sponser_img_brand);
+        Glide.with(context).load(sponser.getImageLink()).placeholder(R.drawable.img_product).into(holder.sponser_img_brand);
         holder.recyclerView.setLayoutManager(new LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false));
         holder.recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
+        holder.sellAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(context, ProductListElectronicActivity.class);
+                intent.putExtra("bpId",sponser.getId());
+                context.startActivity(intent);
+              ;
+            }
+        });
 
 
     }

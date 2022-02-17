@@ -14,19 +14,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Fatafat Sewa"
-
-            android:textColor="@color/orange"
-            android:textSize="@dimen/_16font_mdp" />
 
         <ImageView
-            android:layout_width="@dimen/_60mdp"
+            android:layout_width="@dimen/_160mdp"
             android:layout_height="@dimen/_60mdp"
-            android:layout_marginLeft="@dimen/_25mdp"
+            android:layout_margin="@dimen/_10mdp"
             android:background="@color/white"
             android:src="@drawable/logo" />
 
@@ -34,7 +26,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_50mdp"
         android:orientation="horizontal"
         android:weightSum="4">
@@ -48,7 +40,7 @@
             <Button
                 android:layout_width="@dimen/_85mdp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_25mdp"
+                android:layout_marginTop="@dimen/_20mdp"
                 android:layout_marginBottom="@dimen/_15mdp"
                 android:background="@drawable/bg_btn_blue"
                 android:text="Signup"
@@ -57,7 +49,7 @@
             <Button
                 android:layout_width="@dimen/_85mdp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15mdp"
+                android:layout_marginTop="@dimen/_10mdp"
                 android:background="@drawable/bg_btn_orange"
                 android:text="Login"
                 app:backgroundTint="@null" />
@@ -65,34 +57,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_10mdp"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_50mdp"
+                    android:layout_height="@dimen/_50mdp"
                     android:layout_marginBottom="@dimen/_7mdp"
-                    android:background="@drawable/bg_circle"
                     android:padding="@dimen/_10mdp"
                     android:src="@drawable/ic_facebook"
                     android:tint="@color/white" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_50mdp"
+                    android:layout_height="@dimen/_50mdp"
                     android:layout_marginBottom="@dimen/_7mdp"
-                    android:background="@drawable/bg_circle"
                     android:padding="@dimen/_10mdp"
                     android:src="@drawable/ic_facebook"
                     android:tint="@color/white" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/_50mdp"
+                    android:layout_height="@dimen/_50mdp"
                     android:layout_marginBottom="@dimen/_7mdp"
-                    android:background="@drawable/bg_circle"
-                    android:padding="@dimen/_10mdp"
+                   android:padding="@dimen/_10mdp"
                     android:src="@drawable/ic_facebook"
                     android:tint="@color/white" />
             </LinearLayout>
@@ -121,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10mdp"
-                android:drawableRight="@drawable/ic_add"
+                android:drawableRight="@drawable/ic_profile"
                 android:drawableTint="@color/white"
 
                 android:text="UserName"
@@ -130,60 +119,45 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_text_full"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:background="@drawable/bg_white"
                 android:padding="@dimen/_7mdp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_15mdp"
-                android:drawableRight="@drawable/ic_add"
+                android:drawableRight="@drawable/ic_password"
                 android:drawableTint="@color/white"
-                android:text="UserName"
+                android:text="Password"
                 android:textColor="@color/white" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_text_full"
-                android:padding="@dimen/_7mdp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15mdp"
-                android:drawableRight="@drawable/ic_add"
-                android:text="UserName"
-                android:drawableTint="@color/white"
-                android:textColor="@color/white" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_text_full"
-                android:padding="@dimen/_7mdp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_15mdp"
-                android:drawableRight="@drawable/ic_add"
-                android:text="UserName"
-                android:drawableTint="@color/white"
-                android:textColor="@color/white" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/_15mdp"
-                android:background="@drawable/bg_text_full"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:background="@drawable/bg_white"
                 android:padding="@dimen/_7mdp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:text="forgot password ? click here"
+                android:textColor="@color/white" />
+
+
 
             <Button
                 android:layout_width="@dimen/_150mdp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_55mdp"
+                android:layout_marginTop="@dimen/_25mdp"
                 android:background="@drawable/bg_btn_white"
                 android:padding="@dimen/_5mdp"
                 android:text="Login"

@@ -27,6 +27,10 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
         this.viewItemInterface = viewItemInterface;
     }
 
+    public RecyclerViewItemInterface getViewItemInterface() {
+        return viewItemInterface;
+    }
+
     public CategoryAdapterOnlyName(Context context, List<Category> categories) {
         this.context = context;
         this.categories = categories;
@@ -56,7 +60,7 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
                     notifyItemChanged(previousItem);
                     notifyItemChanged(position);
 
-                    viewItemInterface.onItemClick(holder.getAdapterPosition(), category.getName());
+                    viewItemInterface.onItemClick(holder.getLayoutPosition(), category.getId());
                 }
             }
         });
@@ -91,7 +95,7 @@ public class CategoryAdapterOnlyName extends RecyclerView.Adapter<CategoryAdapte
 
     public interface RecyclerViewItemInterface {
 
-        void onItemClick(int position, String catName);
+        void onItemClick(int position, int catId);
 
     }
 }

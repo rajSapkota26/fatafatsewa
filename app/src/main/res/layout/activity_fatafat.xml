@@ -84,8 +84,7 @@
             app:layout_constraintBottom_toTopOf="@+id/bottomBar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-             />
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
         <me.ibrahimsn.lib.SmoothBottomBar
             android:id="@+id/bottomBar"
@@ -93,7 +92,7 @@
             android:layout_height="?attr/actionBarSize"
             android:layout_gravity="bottom"
             app:backgroundColor="@color/white"
-app:iconTint="@color/orange"
+            app:iconTint="@color/orange"
             app:indicatorColor="@color/orange"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

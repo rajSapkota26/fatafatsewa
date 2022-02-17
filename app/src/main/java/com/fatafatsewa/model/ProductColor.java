@@ -1,12 +1,18 @@
 package com.fatafatsewa.model;
 
-import java.util.List;
-
-public class FilterCategory {
+public class ProductColor {
     private int id;
     private String name;
-    private int catId;
-    private String  imageLink;
+    private String imageLink;
+    private int productId;
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
 
     public int getId() {
         return id;
@@ -22,14 +28,6 @@ public class FilterCategory {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getCatId() {
-        return catId;
-    }
-
-    public void setCatId(int catId) {
-        this.catId = catId;
     }
 
     public String getImageLink() {

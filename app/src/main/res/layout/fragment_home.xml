@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/white"
     tools:context=".fragments.HomeFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -100,20 +101,9 @@
                 android:orientation="horizontal"
                 android:background="@color/white"
                 android:weightSum="4">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:textColor="@color/orange"
-                    android:textSize="@dimen/_20font_mdp"
-                   android:textStyle="bold"
-                    android:layout_gravity="center_vertical"
-                    android:text="BRAND" />
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/main_brands_recyclerview"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
                     android:background="@color/white" />
@@ -130,6 +120,7 @@
 
             <!--Flash sale -->
             <LinearLayout
+                android:id="@+id/flashshell_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_1mdp"
@@ -138,7 +129,7 @@
                 android:weightSum="5">
 
                <LinearLayout
-                   android:layout_width="wrap_content"
+                  android:layout_width="wrap_content"
                    android:layout_height="match_parent"
                    android:gravity="center"
                    android:layout_weight="2"
@@ -217,11 +208,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
-            <!--Top product List -->
-            <!--Top Rated product -->
-            <!--Top product List -->
-            <!--Top product List -->
-            <!--Top product List -->
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

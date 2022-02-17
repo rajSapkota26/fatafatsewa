@@ -26,31 +26,104 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cart_brand_image" />
 
-<LinearLayout
-    android:id="@+id/btmview"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    android:orientation="horizontal">
-    <CheckBox
-        android:id="@+id/cat_selectAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select All"
-        android:layout_marginRight="@dimen/_15mdp"
-        android:buttonTint="@color/orange"
-        android:layout_gravity="center_vertical" />
-    <Button
-        android:id="@+id/cart_orderNow"
+    <LinearLayout
+        android:id="@+id/btmview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_text_full"
-        android:text="Check out"
-        app:backgroundTint="@null" />
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent">
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_3mdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Total price" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="RS: 2500" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_3mdp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delivery fee" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="RS: 150" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5mdp"
+            android:layout_marginRight="@dimen/_5mdp"
+            android:layout_marginBottom="@dimen/_10mdp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5mdp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_text"
+                android:hint="Enter coupon code"
+                android:padding="@dimen/_7mdp"
+                android:textColor="@color/orange" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_text_full"
+                android:text="Apply"
+
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cart_checkoutnow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_text_full"
+            android:text="Check out"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,7 +26,7 @@
         android:layout_marginTop="@dimen/_3mdp" />
 
     <TextView
-        android:id="@+id/address_ac1"
+        android:id="@+id/pf_editProfile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit Profile"
@@ -37,7 +37,18 @@
         android:drawableRight="@drawable/ic_viewmore"
         android:background="@drawable/bg_text" />
     <TextView
-        android:id="@+id/address_order"
+        android:id="@+id/pf_viewProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Profile"
+        android:padding="@dimen/_8mdp"
+        android:textColor="@color/black"
+        android:drawableTint="@color/black"
+        android:layout_margin="@dimen/_3mdp"
+        android:drawableRight="@drawable/ic_viewmore"
+        android:background="@drawable/bg_text" />
+    <TextView
+        android:id="@+id/pf_viewOrders"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="My Orders"

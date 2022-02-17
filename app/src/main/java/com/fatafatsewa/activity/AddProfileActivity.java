@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.fatafatsewa.R;
 
-public class ProductListHomeApplienceActivity extends AppCompatActivity {
+public class AddProfileActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_list_home_applience);
+        setContentView(R.layout.activity_add_profile);
     }
 }

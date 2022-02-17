@@ -38,7 +38,7 @@ public class ImageSliderAdapter extends SliderViewAdapter<ImageSliderAdapter.Sli
 //        viewHolder.textViewDescription.setTextSize(16);
 //        viewHolder.textViewDescription.setTextColor(Color.WHITE);
         Glide.with(viewHolder.itemView)
-                .load(sliderItem.getImageUrl()).placeholder(R.drawable.logo)
+                .load(sliderItem.getImageLink()).placeholder(R.drawable.logo)
                 .fitCenter()
                 .into(viewHolder.imageViewBackground);
 
